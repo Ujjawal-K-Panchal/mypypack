@@ -51,8 +51,8 @@ Clone this repo. Then don't work in this repo. Go outside this repo (1 level) an
 
 Note: Since we are making a package, we want the code to be of acceptable complexity and quality. Since this code will be rapidly called, reference, read and maintained. Therefore, the following steps are useful for the same.
 
-1. cd into `Mypypack/` folder you created.
-2. Type: `python -m pip install radon`.
+1. cd into `Mypypack/` folder you created (Ignore if already here).
+2. Type: `pip install radon`.
 3. See what radon has to offer: `radon`.
 3. Compute [cyclomatic complexity](https://en.wikipedia.org/wiki/Cyclomatic_complexity#:~:text=Cyclomatic%20complexity%20is%20a%20software,McCabe%2C%20Sr.) of your code: `radon cc mypack`. Output looks as follows:
 
@@ -75,7 +75,7 @@ Mypack/tests/test_greetings.py
 
 We want our project to be efficient and not install unrequired libraries. Also to remove any unused code.`vulture` provides an excellent solution to this.
 
-1. cd into your folder root: `cd Mypypack`.
+1. cd into your folder root: `cd Mypypack` (Ignore if already here).
 2. install vulture: `pip install vulture`.
 3. type in: `vulture mypack`.
 
@@ -85,3 +85,16 @@ mypack/mypack/greetings.py:11: unused function 'sayHiTo' (60% confidence)
 mypack/mypack/greetings.py:17: unused function 'sayHelloTo' (60% confidence)
 ```
 Note: confidence interval since it cannot know with 100% surity if something is somehow used or not. Thisindeterminacy is possible through some `hacky` programming practices.
+
+
+### 5. Code Formatting.
+
+We want our package to have easy to read, standard formatted code. You can have `black` cleanup your files and format them to the standard `PEP8` compliant code.
+
+
+1. cd into your folder root: `cd Mypypack` (Ignore if already here).
+2. `pip install black`.
+3. Copy your `greetings.py` code to another window in your editor without saving it. This is so we can notice how `black` changed our code.
+4. run: `black mypack/mypack/greetings.py`
+5. If you want to experience how it changes, change around your `greetings.py` with bad formatting and do step 4 again. This will help you appreciate what `black` did.
+
