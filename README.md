@@ -14,21 +14,21 @@ This is a repo for practicing package management in python.
 8. Let poetry create venv using your .toml file (created inside mypack by poetry): `poetry shell`.
 9. Add `greetings.py` (from this repo) to your local `mypack folder`.
 10. Play inside poetry python shell:  `python`
-		```python
-		>>> from mypack import greetings
-		>>> greetings.sayHi()
-		'Hi!'
-		>>> greetings.sayHello()
-		'Hello!'
-		>>> import mypack #demonstrate an error that we later solve.
-		>>> mypack.greetings.sayHi() #will give an error.
-		AttributeError: module 'mypack' has no attribute 'greetings'
-		```
+```python
+	>>> from mypack import greetings
+	>>> greetings.sayHi()
+	'Hi!'
+	>>> greetings.sayHello()
+	'Hello!'
+	>>> import mypack #demonstrate an error that we later solve.
+	>>> mypack.greetings.sayHi() #will give an error.
+	AttributeError: module 'mypack' has no attribute 'greetings'
+```
 11. Go inside `./mypack/__init__.py` and add the following line to top: `from . import greetings`.
 12. Now see the error vanish:
-		```python
-		>>> import mypack
-		>>> mypack.greetings.sayHi()
-		'Hi!'
-		```
+```python
+	>>> import mypack
+	>>> mypack.greetings.sayHi()
+	'Hi!'
+```
 
