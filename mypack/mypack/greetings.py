@@ -1,3 +1,5 @@
+import math #unused dependency.
+
 def sayHi():
     return "Hi!"
 
