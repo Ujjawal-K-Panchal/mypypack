@@ -112,10 +112,15 @@ Note how poetry created a TOML file. Now lets add a few things to it.
 
 You can look at the toml format, poetry tool, and choose to add additional files if you choose.
 
-## 7. Final Checks & Building.
+## 7. Final Checks & Building & Publishing to PyPI.
 
 Now lets check our package using `poetry` to make sure everything works.
 
 1. cd into your package: `cd Mypypack/mypack`.
 2. Run: `poetry check`. If everything works, it should say `All set!`. Otherwise it will point an error.
 3. Finally, we build our package using `poetry`: `poetry build`. This will build a `.whl` file and a `.tar.gz` file. These will be pushed to PyPi.
+4. Now signup to [PyPi](https://pypi.org/). Remember to verify email.
+5. Configure your poetry with pypi credentials: `poetry config http-basic.pypi <uname> <pword>`.
+6. Publish your `mypack` to poetry. (note you must be in mypack/ where .whl file is present).  Run: `poetry publish`
+Note: When you run this with `mypack`, you will probably see an error because it already exists and you don't have write access on this. Instead of publishing redundant repos on PyPI, you can build your great code and add it to python!
+7. Once you have successfully uploaded to PyPI, you can just install your package using std pip: `pip install mypack`
