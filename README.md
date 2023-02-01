@@ -47,7 +47,7 @@ Clone this repo. Then don't work in this repo. Go outside this repo (1 level) an
 ```
 5. Do a verbose unit test: `pytest -v mypack`.
 
-### 3. Quality Assessment.
+## 3. Quality Assessment.
 
 Note: Since we are making a package, we want the code to be of acceptable complexity and quality. Since this code will be rapidly called, reference, read and maintained. Therefore, the following steps are useful for the same.
 
@@ -71,7 +71,7 @@ Mypack/tests/test_greetings.py
 6. Maintanibility index `radon mi` is of particular interest, since we are making a package.
 
 
-### 4. Used/Unused Dependency Management.
+## 4. Used/Unused Dependency Management.
 
 We want our project to be efficient and not install unrequired libraries. Also to remove any unused code.`vulture` provides an excellent solution to this.
 
@@ -87,7 +87,7 @@ mypack/mypack/greetings.py:17: unused function 'sayHelloTo' (60% confidence)
 Note: confidence interval since it cannot know with 100% surity if something is somehow used or not. Thisindeterminacy is possible through some `hacky` programming practices.
 
 
-### 5. Code Formatting.
+## 5. Code Formatting.
 
 We want our package to have easy to read, standard formatted code. You can have `black` cleanup your files and format them to the standard `PEP8` compliant code.
 
