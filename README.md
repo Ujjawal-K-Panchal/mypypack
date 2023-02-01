@@ -3,6 +3,8 @@
 This is a repo for practicing package management in python.
 Clone this repo. Then don't work in this repo. Go outside this repo (1 level) and follow Tutorial.
 
+This is a quick, partial summary of [JCharisTech's much lengthier and in-depth tutorial](https://www.youtube.com/watch?v=ueuLe4PipiI).
+
 ## 1. Tutorial.
 
 1. Install [poetry](https://python-poetry.org/docs/).
