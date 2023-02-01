@@ -1,2 +1,7 @@
 venv*/
 **/__pycache__
+
+
+#dont commit wheel or tar files.
+*.whl
+*.tar.gz

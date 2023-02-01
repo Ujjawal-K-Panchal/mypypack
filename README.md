@@ -98,3 +98,22 @@ We want our package to have easy to read, standard formatted code. You can have 
 4. run: `black mypack/mypack/greetings.py`
 5. If you want to experience how it changes, change around your `greetings.py` with bad formatting and do step 4 again. This will help you appreciate what `black` did.
 
+## 6. TOML file changes.
+
+Note how poetry created a TOML file. Now lets add a few things to it.
+
+1. In `[tool.poetry]` section, below authors line add `readme = "README.md"`.
+2. In same section, below readme, add `homepage = "<project homepage link>"`.
+3. Similarly add `repository = "<package repo link>"`.
+4. Add license: `license = "MIT"`.
+5. Add keywords: `keywords = ["package-managment", "packaging", "<your name>"]`.
+
+You can look at the toml format, poetry tool, and choose to add additional files if you choose.
+
+## 7. Final Checks & Building.
+
+Now lets check our package using `poetry` to make sure everything works.
+
+1. cd into your package: `cd Mypypack/mypack`.
+2. Run: `poetry check`. If everything works, it should say `All set!`. Otherwise it will point an error.
+3. Finally, we build our package using `poetry`: `poetry build`. This will build a `.whl` file and a `.tar.gz` file. These will be pushed to PyPi.
